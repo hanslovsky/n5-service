@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>33.2.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>com.hanslovsky</groupId>
+	<artifactId>n5-service</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+
+	<name>N5 Service</name>
+	<description>SciJava Service for N5</description>
+	<url>https://github.com/hanslovsky/n5-service</url>
+	<inceptionYear>2023</inceptionYear>
+	<organization>
+		<name>Philipp Hanslovsky</name>
+		<url>http://hanslovsky.com/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Simplified BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>hanslovsky</id>
+			<name>Philipp Hanslovsky</name>
+			<url>http://imagej.net/User:Hanslovsky</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Philipp Hanslovsky</name>
+			<properties>
+				<id>hanslovsky</id>
+			</properties>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tag/n5</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/hanslovsky/n5-service</connection>
+		<developerConnection>scm:git:git@github.com:hanslovsky/n5-service</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/hanslovsky/n5-service</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/hanslovsky/n5-service/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>GitHub Actions</system>
+		<url>https://github.com/hanslovsky/n5-service/actions</url>
+	</ciManagement>
+
+	<properties>
+		<package-name>com.hanslovsky.n5.service</package-name>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.projectName>N5 Service</license.projectName>
+		<license.organizationName>Hanslovsky</license.organizationName>
+		<license.copyrightOwners>Philipp Hanslovsky</license.copyrightOwners>
+
+		<!-- NB: Deploy releases to the SciJava Maven repository. -->
+		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+
+		<kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib-jdk8</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+</project>
